@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
         
 jobs:
- build-kernel-gs201:
+  build-kernel-gs201:
     uses: ./.github/workflows/sultan.yml
     secrets: inherit
     with:
@@ -22,9 +22,9 @@ jobs:
     secrets: inherit
     with:
       codename: "zuma"
-       repo: "android_kernel_google_zuma"
-       android_version: "android14"
-       kernel_version: "6.1"
+      repo: "android_kernel_google_zuma"
+      android_version: "android14"
+      kernel_version: "6.1"
 
   build-kernel-zumapro:
     uses: ./.github/workflows/sultan.yml
