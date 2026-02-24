@@ -42,7 +42,7 @@ jobs:
         - build-kernel-zuma
         - build-kernel-zumapro
     env:
-      REPO_OWNER: TheWildJames
+      REPO_OWNER: PixelTheKWolf
       REPO_NAME: Sultan_KernelSU_SUSFS
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       RELEASE_NAME: "Sultan Kernels With KernelSU Next & SUSFS v2.0.0"
