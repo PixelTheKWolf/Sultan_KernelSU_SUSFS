@@ -107,9 +107,6 @@ jobs:
           cp ../kernel_patches/sultan/sys.c_fix.patch ./
           patch -p1 < sys.c_fix.patch
 
-          cp ../kernel_patches/wild/susfs_fix_patches/v${SUSFS_VERSION}/a14-6.1/base.c.patch ./
-          patch -p1 < base.c.patch
-
       - name: Configure KernelSU
         run: |
           cd "$CONFIG"
