@@ -85,7 +85,7 @@ jobs:
           cd "$CONFIG"
 
           echo "Adding KernelSU..."
-          curl -LSs "https://raw.githubusercontent.com/WildKernels/Wild_KSU/wild/kernel/setup.sh" | bash -s wild
+          curl -LSs "https://raw.githubusercontent.com/WildKernels/Wild_KSU/stable/kernel/setup.sh" | bash -s canary
 
       - name: Apply SUSFS Patches
         if: ${{ matrix.variant != 'WKSU' }}
@@ -106,9 +106,6 @@ jobs:
           patch -p1 < 50_add_susfs_in_gki-${{ inputs.android_version }}-${{ inputs.kernel_version }}.patch || true
           cp ../kernel_patches/sultan/sys.c_fix.patch ./
           patch -p1 < sys.c_fix.patch
-
-          cp ../kernel_patches/wild/susfs_fix_patches/v${SUSFS_VERSION}/a14-6.1/base.c.patch ./
-          patch -p1 < base.c.patch
 
       - name: Configure KernelSU
         run: |
